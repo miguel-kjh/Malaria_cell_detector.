@@ -1,16 +1,8 @@
 # Malaria_cell_detector.
 Comparison between a CNN and a VGG16 for the diagnosis of malaria.Using Keras
 # Informe
-Se compara entre dos algoritmos diferentes ramificación y salto, y ramificación y salto con subestimación. 
-
-Se ha añadido al fichero utils.py las siguientes clases:
-
-babg Basada en la estructura de la clase FIFOQueue modificando el método extend añadidiendo la ordenación de la lista por el path_cost.
-
-babgsub Basada en la estructura de la clase FIFOQueue modificando el método extend añadidiendo la ordenación de la lista por  la suma del path_cost junto con de la heurística dada en la clase problem.
-
-Se ha añadido al fichero search.py a la clase graph_search:
-branch_and_bound y branch_and_bound_sud que devuelven la búsqueda del árbol correspondiente.
-
-Se ha añadido el contador expandido y generados al método graph_search para contabilizar el número de nodos expandidos y generados.
-Conclusión, el números de nodos en una búsqueda de ramificación y salto con subestimación es menor que con su homóloga no informada.
+Esta práctica se ha basado en el siguiente dataset:
+https://www.kaggle.com/iarunava/cell-images-for-detecting-malaria
+Se trata de identificar entre células infectadas malaria y sanas, más concretamente glóbulos rojos.Para ello se compara los resultados de un red basada en la VGG16 y una CNN adaptada al problema.
+Para llegar a resultados decentes se ha sustituido la capa densa y se ha recalculado los pesos de algunas capas convolutivas intermedias.Debido a que la VGG16 con los pesos del dataset imagenet no son pesos adecuados para poder identificar la zona infectada de los glóbulos. Se llega aproximadamente a un 94% de accuracy y validation.
+Se introduce varias capas de maxpooling para poder caracterizar las zonas y patrones más característicos de las imágenes.Asimismo se introduce varias capas dropout para reducir el posible sobreajuste. Se llega a un 92% de acurracy y validation.
