@@ -1,9 +1,5 @@
 # Malaria_cell_detector.
 Comparison between a CNN and a VGG16 for the diagnosis of malaria.Using Keras
-# Informe
-Esta práctica se ha basado en el siguiente dataset:
-https://www.kaggle.com/iarunava/cell-images-for-detecting-malaria.
+This practice has been based on the following dataset: https://www.kaggle.com/iarunava/cell-images-for-detecting-malaria.
 
-Se trata de identificar entre células infectadas malaria y sanas, más concretamente glóbulos rojos.Para ello se compara los resultados de un red basada en la VGG16 y una CNN adaptada al problema.
-Para llegar a resultados decentes se ha sustituido la capa densa y se ha recalculado los pesos de algunas capas convolutivas intermedias.Debido a que la VGG16 con los pesos del dataset imagenet no son pesos adecuados para poder identificar la zona infectada de los glóbulos. Se llega aproximadamente a un 94% de accuracy y validation.
-Se introduce varias capas de maxpooling para poder caracterizar las zonas y patrones más característicos de las imágenes.Asimismo se introduce varias capas dropout para reducir el posible sobreajuste. Se llega a un 92% de acurracy y validation.
+The aim is to identify between malaria-infected and healthy cells, more specifically red blood cells. To this end, we compare the results of a network based on VGG16 and a CNN adapted to the problem. To achieve decent results the dense layer has been replaced and the weights of some intermediate convolutional layers have been recalculated. Because the VGG16 with the imagenet dataset weights are not adequate weights to be able to identify the infected area of the globules. Approximately 94% accuracy and validation is achieved. Several layers of maxpooling are introduced to characterize the most characteristic zones and patterns of the images. Several dropout layers are also introduced to reduce possible overfitting. Approximately 92% of acurracy and validation is achieved.
